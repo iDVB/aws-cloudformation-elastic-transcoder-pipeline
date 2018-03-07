@@ -1,7 +1,6 @@
 const slsw = require('serverless-webpack');
 const path = require('path');
 const nodeExternals = require('webpack-node-externals');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: slsw.lib.entries,
@@ -19,10 +18,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new CopyWebpackPlugin([path.resolve(__dirname, 'functions/**/*.json')], {
-      debug: 'warning',
-    }),
-  ],
   mode: 'production',
 };

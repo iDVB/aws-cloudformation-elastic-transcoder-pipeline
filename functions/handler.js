@@ -1,17 +1,15 @@
 const CfnLambda = require('cfn-lambda');
 import AWS from 'aws-sdk';
 import { Create, Update, Delete } from './Pipeline';
+import Schema from './schema.json';
 
 module.exports.pipelineHandler = (event, context) => {
-  const schemaPath = [__dirname, 'schema.json'];
-  console.log('schemaPath', schemaPath);
   const ElasticTranscoderPipeline = CfnLambda({
     Create: Create,
     Update: Update,
     Delete: Delete,
-    SchemaPath: [__dirname, 'schema.json'],
+    Schema,
   });
-  // Not sure if there's a better way to do this...
   AWS.config.region = currentRegion(context);
   return ElasticTranscoderPipeline(event, context);
 };
