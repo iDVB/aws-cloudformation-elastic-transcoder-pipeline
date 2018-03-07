@@ -1,8 +1,7 @@
 {
-  "name": "aws-cloudformation-elastic-transcoder-pipeline",
+  "name": "cfn-elastic-transcoder-pipeline",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Warn: no test specified\" && exit 0"
   },

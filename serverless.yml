@@ -25,9 +25,5 @@ functions:
   pipeline:
     handler: functions/handler.pipelineHandler
 
-package:
-  include:
-    - functions/schema.json
-
 plugins:
   - serverless-webpack

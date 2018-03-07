@@ -6,9 +6,9 @@ This custom resource is based on [cfn-lambda](https://github.com/andrew-templeto
 
 Clone the repository. Inside the root folder:
 
-```
-$ yarn install
-$ sls deploy
+```bash
+yarn install
+sls deploy
 ```
 
 This command deploy the lambda helper on your default AWS region using the Serverless Framework
