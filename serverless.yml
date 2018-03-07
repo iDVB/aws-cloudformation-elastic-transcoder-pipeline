@@ -1,0 +1,29 @@
+
+service: cfn-transcoder-pipeline
+
+custom:
+  webpackIncludeModules: true
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - 'logs:CreateLogGroup'
+        - 'logs:CreateLogStream'
+        - 'logs:PutLogEvents'
+      Resource: 'arn:aws:logs:*:*:*'
+    - Effect: Allow
+      Action:
+        - 'elastictranscoder:*'
+        - 'iam:PassRole'
+      Resource:
+        - '*'
+
+functions:
+  pipeline:
+    handler: functions/handler.pipelineHandler
+
+plugins:
+  - serverless-webpack
