@@ -8,6 +8,8 @@ provider:
   name: aws
   runtime: nodejs6.10
   variableSyntax: "\\${((?!AWS)[ ~:a-zA-Z0-9._'\",\\-\\/\\(\\)]+?)}"
+  deploymentBucket:
+    name: ${cf:marketing-resources-prod.DeploymentBucket}
   iamRoleStatements:
     - Effect: Allow
       Action:
