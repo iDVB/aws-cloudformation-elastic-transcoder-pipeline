@@ -9,7 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.197.0",
-    "cfn-lambda": "^2.1.1"
+    "cfn-lambda": "^3.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
