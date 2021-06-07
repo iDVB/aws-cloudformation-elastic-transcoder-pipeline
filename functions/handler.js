@@ -3,6 +3,7 @@ import AWS from 'aws-sdk';
 import { Create, Update, Delete } from './Pipeline';
 import Schema from './schema.json';
 
+// pipleline function
 module.exports.pipelineHandler = (event, context) => {
   const ElasticTranscoderPipeline = CfnLambda({
     Create: Create,
